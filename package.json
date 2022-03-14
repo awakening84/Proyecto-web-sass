@@ -1,11 +1,19 @@
 {
-  "name": "c",
+  "name": "proyecto-web-sass",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awakening84/Proyecto-web-sass.git"
+  },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/awakening84/Proyecto-web-sass/issues"
+  },
+  "homepage": "https://github.com/awakening84/Proyecto-web-sass#readme"
 }

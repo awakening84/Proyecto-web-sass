@@ -7,11 +7,6 @@ html {
     min-height: 100%;
 }
 
-@import"body";
-@import"footer";
-@import"header";
-@import"main";
-
 p {
     font-size: 20px;
     text-align: justify;
@@ -27,7 +22,7 @@ p {
 
 img {
     margin: 10px auto;
-    display: grid;
+    display:grid;
     margin-left: auto;
     margin-right: auto;
 }
@@ -62,7 +57,7 @@ form {
     grid-auto-rows: 1fr;
     gap: 20px;
     height: 500px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
     display: grid;
 }
@@ -112,7 +107,7 @@ section {
 }
 
 textarea {
-    resize: none;
+    overflow: none;
     width: 500px;
     height: 250px;
     size: 100px;
@@ -138,6 +133,45 @@ textarea {
     margin: 50px;
     margin-top: 50px;
 }
+
+
+header {
+    grid-area: encabezado;
+    display: block;
+}
+
+
+main {
+    grid-area: servicios;
+    height: 50vh;
+    width: 100vw;
+}
+
+footer {
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+    color: rgb(0, 7, 7);
+    grid-area: pie;
+}
+
+body {
+    font-size: 20px;
+    width: 100%;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    height: 100px;
+    color: rgb(0, 12, 12);
+    background: -webkit-linear-gradient(left, hsl(49, 91%, 46%), #dcd9b9);
+    background: -o-linear-gradient(right, #d46912, #d1a11c);
+    background: -moz-linear-gradient(right, #ec4150, #f1670a);
+    background: linear-gradient(to right, #c5762c, #dccab9);
+    background-color: #f78809;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 .logo {
     display: grid;
     align-content: left;
@@ -156,4 +190,104 @@ textarea {
     width: 200px;
     padding: 20px;
     background-color: #f7b80a;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+header nav ul li {
+    background-color: #320236;
+}
+
+ header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+header nav ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li:hover {
+    background: black;
+}
+
+header nav ul ul {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    padding: 0;
+}
+
+header nav ul ul li {
+    float: none;
+    width: 100px
+}
+
+header nav ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+header nav ul li:hover>ul {
+    display: block;
+}
+
+
+
+
+@import"body";
+@import"footer";
+@import"header";
+@import"main";
+
+
+@media (max-width:768px) {
+    body {
+        font-size: 20px;
+    }
+    .container-area {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .media {
+        display: flex;
+    }
+    .logo {
+        display: grid;
+    }
+    .menu {
+        display: flex;
+    }
+    footer {
+        font-size: 150%;
+    }
+    h1,
+    h2 {
+        display: grid;
+    }
 }
